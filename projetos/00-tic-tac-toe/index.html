@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="css/style.css">
+        <title> TIC-TAC-TOE </title>
+    </head>
+    <body>
+
+        <div id="plataforma">
+            <div>
+                <p>
+                    <span> <h4> TIC-TAC-TOE </h4> </span>
+                    <label for="jogador1"> Jogador X </label>
+                    <input id="jogador1" type="text" autofocus>
+                    <label for="jogador2"> Jogador O </label>
+                    <input id="jogador2" type="text">
+                </p>
+            </div>
+            <div id="placar">
+                <p>
+                    <span> Vitorias</span>
+                    <span> X: </span> <output id="vitoriasdex"> 0 </output> &nbsp;&nbsp;
+                    <span> O: </span> <output id="vitoriasdeo"> 0 </output> &nbsp;&nbsp;
+                    <span> Empates: </span> <output id="empates"> 0 </output>
+                </p>
+            </div>
+            <div id="botoes">
+                <button class="btn-comando" id="reset"> RESET </button>
+                <button class="btn-comando" id="novo"> NOVO </button>
+            </div>
+        </div>
+
+        <table id="tabuleiro">
+            <tbody>
+                <tr>
+                    <td> <button class="celula" id="casa1">&nbsp;&nbsp;&nbsp;</button> </td>
+                    <td> <button class="celula" id="casa2">&nbsp;&nbsp;&nbsp;</button> </td>
+                    <td> <button class="celula" id="casa3">&nbsp;&nbsp;&nbsp;</button> </td>
+                </tr>
+                <tr>
+                    <td> <button class="celula" id="casa4">&nbsp;&nbsp;&nbsp;</button> </td>
+                    <td> <button class="celula" id="casa5">&nbsp;&nbsp;&nbsp;</button> </td>
+                    <td> <button class="celula" id="casa6">&nbsp;&nbsp;&nbsp;</button> </td>
+                </tr>
+                <tr>
+                    <td> <button class="celula" id="casa7">&nbsp;&nbsp;&nbsp;</button> </td>
+                    <td> <button class="celula" id="casa8">&nbsp;&nbsp;&nbsp;</button> </td>
+                    <td> <button class="celula" id="casa9">&nbsp;&nbsp;&nbsp;</button> </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <script src="js/main.js" type="module"></script>
+    </body>
+</html>

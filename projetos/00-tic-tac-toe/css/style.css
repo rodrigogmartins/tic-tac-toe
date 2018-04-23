@@ -1,0 +1,111 @@
+body {
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background: #333;
+}
+
+td {
+    padding: 0px;
+}
+
+h4 {
+    margin-bottom: 15px;
+}
+
+input {
+    background-color: rgb(83, 83, 83);
+    border: 0px;
+    transition: 0.3s;
+    font-size: 0.8em;
+    color: #333;
+}
+
+input:hover {
+    background-color: rgb(107, 107, 107);
+}
+
+input:focus {
+    background-color: rgb(107, 107, 107);
+}
+
+.btn-comando {
+    font: 1em "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-color: rgb(83, 83, 83);
+    color: #333;
+    border: 0.2em solid rgb(83, 83, 83);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.btn-comando:hover {
+    background-color: rgb(107, 107, 107);
+    border: 0.2em solid rgb(107, 107, 107);
+}
+
+.celula {
+    width: 110%;
+    height: 110%;
+    color: rgb(83, 83, 83);
+    font: 11em "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-color: #333;
+    border: 0.1em solid rgb(83, 83, 83);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.celula:hover {
+    background-color: rgb(107, 107, 107);
+}
+
+#plataforma {
+    padding-left: 25px;
+    padding-top: 25px;
+    font: 2em "Lucida Grande", Helvetica, Arial, sans-serif;
+    background: #333;
+    color: #bbbbbb;
+}
+
+#tabuleiro {
+    margin: 64px auto 0px auto;
+}
+
+#casa1 {
+    border-left: 0px;
+    border-top: 0px;
+    border-bottom: 0px;
+}
+
+#casa2 {
+    border-top: 0px;
+    border-bottom: 0px;
+}
+
+#casa3 {
+    border-right: 0px;
+    border-top: 0px;
+    border-bottom: 0px;
+}
+
+#casa4 {
+    border-left: 0px;
+}
+
+#casa6 {
+    border-right: 0px;
+}
+
+#casa7 {
+    border-left: 0px;
+    border-bottom: 0px;
+    border-top: 0px;
+}
+
+#casa8 {
+    border-bottom: 0px;
+    border-top: 0px;
+}
+
+#casa9 {
+    border-right: 0px;
+    border-bottom: 0px;
+    border-top: 0px;
+}
