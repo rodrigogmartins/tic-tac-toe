@@ -5,7 +5,7 @@
 # INSTRUÇÕES
 ````
   git clone https://github.com/rodrigogmartins/tic-tac-toe.git
-  cd SportFree/projeto
+  cd tic-tac-toe/projeto
   npm install
   npm start OU npm start public
 ````
