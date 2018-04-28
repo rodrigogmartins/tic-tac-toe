@@ -1,10 +1,11 @@
-# DBO-2018
+# Tic-Tac-Toe (Jogo da VeLha)
 
-Repositório da discplina de **Desenvolvimento Baseado em Objetos** do curso **Técnico em Informática para Internet** / IFRS _Campus_ Rio Grande.
+ Trabalho extra da disciplina de DBO desenvolvido por Rodrigo Martins.
 
-## Setup
-
-Os projetos estão disponíveis em _workspace_, que contém os arquivos de configuração necessários para um criar um projeto web estático usando node, live-server, eslint, editorconfig e visual studio code.
-
-## Referências
-
+# INSTRUÇÕES
+``
+  git clone https://github.com/rodrigogmartins/tic-tac-toe.git
+  cd SportFree/projeto
+  npm install
+  npm start OU npm start public
+``
