@@ -35,7 +35,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     RESET.addEventListener('click', function() {
-        console.log('click');
         reset();
         alguemVenceu = false;
         jogadas = 0;
