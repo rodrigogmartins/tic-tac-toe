@@ -1,7 +1,7 @@
 import {verificaVitoria} from './vitoria.js';
 
-const VITORIASX = document.querySelector('#vitoriasdex');
-const VITORIASO = document.querySelector('#vitoriasdeo');
+export const VITORIASX = document.querySelector('#vitoriasdex');
+export const VITORIASO = document.querySelector('#vitoriasdeo');
 
 export function adicionaSimbolo(e, jogadas) {
     const celulaId = e.target.id;
