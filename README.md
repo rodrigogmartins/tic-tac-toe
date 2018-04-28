@@ -1,4 +1,4 @@
-# Tic-Tac-Toe (Jogo da VeLha)
+# Tic-Tac-Toe (Jogo da Velha)
 
  Trabalho extra da disciplina de DBO desenvolvido por Rodrigo Martins.
 
