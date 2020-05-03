@@ -1,18 +1,18 @@
 {
-  "name": "dbo-2018-workspace",
+  "name": "Tic-Tac-Toe",
   "version": "1.0.0",
-  "description": "Workspace com o ambiente node necessário para o Desenvolvimento Web",
+  "description": "Tic-Tac-Toe",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "live-server"
   },
   "keywords": [],
-  "author": "Prof. Márcio Torres",
+  "author": "Rodrigo Gaspar Martins",
   "license": "MIT",
   "devDependencies": {
     "eslint": "^4.13.1",
     "eslint-config-google": "^0.9.1",
-    "live-server": "^1.2.0"
+    "live-server": "^1.2.1"
   }
 }

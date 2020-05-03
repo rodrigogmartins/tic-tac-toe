@@ -1,11 +1,12 @@
-# Tic-Tac-Toe (Jogo da Velha)
+# Jogo da Velha
 
- Trabalho extra da disciplina de DBO desenvolvido por Rodrigo Martins.
+Projeto desenvolvido durante o curso integrado de Informática para a Internet no IFRS.
 
-# INSTRUÇÕES
-````
-  git clone https://github.com/rodrigogmartins/tic-tac-toe.git
-  cd tic-tac-toe/projeto
-  npm install
-  npm start OU npm start public
-````
+## Conhecimentos trabalhados no projeto
+
+* HTML
+* CSS
+* JavaScript
+
+## Autor
+* [Rodrigo G. Martins](https://github.com/rodrigogmartins)
