@@ -1,44 +1,79 @@
-import {adicionaSimbolo, temVencedor, desabilitarCelulas,
-    VITORIASO, VITORIASX, reset} from './funcoesTabuleiro.js';
+import { GameService } from './GameService'
 
-document.addEventListener('DOMContentLoaded', function() {
-    const TABULEIRO = document.querySelector('#tabuleiro');
-    const RESET = document.querySelector('#reset');
-    const NOVO = document.querySelector('#novo');
-    const JOGADOR1 = document.querySelector('#jogador1');
-    const JOGADOR2 = document.querySelector('#jogador2');
-    const MAXJOGADAS = 9;
-    const EMPATE = document.querySelector('#empates');
-    let jogadas = 0;
-    let alguemVenceu = false;
+document.addEventListener('DOMContentLoaded', function () {
+    const GAME = new GameService()
+    const TABULEIRO = document.querySelector('#tabuleiro')
+    const NOVO_JOGO_BTN = document.querySelector('#novo')
+    const RESET_BTN = document.querySelector('#reset')
+    const MAXJOGADAS = 9
+    let jogadas = 0
+    let jogoAcabou = false
 
+    TABULEIRO.addEventListener('click', function (e) {
+        if (
+            e.target.tagName === 'BUTTON' &&
+            jogadas < MAXJOGADAS &&
+            !jogoAcabou
+        ) {
+            const celulaId = e.target.id
+            const celulas = document.querySelectorAll('.celula')
+            const simbolo = jogadas % 2 === 0 ? 'X' : 'O'
 
-    TABULEIRO.addEventListener('click', function(e) {
-        if (e.target.tagName === 'BUTTON'
-            && jogadas <= MAXJOGADAS && !alguemVenceu) {
-            adicionaSimbolo(e, jogadas);
-            jogadas++;
-            alguemVenceu = temVencedor();
-            if (alguemVenceu) {
-                desabilitarCelulas();
-            } else if (jogadas === MAXJOGADAS && !alguemVenceu) {
-                EMPATE.value++;
-                desabilitarCelulas();
+            GAME.realizaJogada(celulaId, simbolo)
+            jogadas++
+
+            if (GAME.verificaVitoria(celulas, simbolo)) {
+                jogoAcabou = true
+                desabilitarCelulas()
+                contabilizaResultado(simbolo)
+            } else if (jogadas === MAXJOGADAS) {
+                jogoAcabou = true
+                desabilitarCelulas()
+                contabilizaResultado('EMPATE')
             }
         }
-    });
+    })
 
-    NOVO.addEventListener('click', function() {
-        reset();
-        alguemVenceu = false;
-        jogadas = 0;
-    });
+    NOVO_JOGO_BTN.addEventListener('click', reset)
 
-    RESET.addEventListener('click', function() {
-        reset();
-        alguemVenceu = false;
-        jogadas = 0;
-        JOGADOR1.value = JOGADOR2.value = '';
-        VITORIASO.value = VITORIASX.value = EMPATE.value = 0;
-    });
-});
+    RESET_BTN.addEventListener('click', function () {
+        reset()
+        resetResultado()
+    })
+
+    function contabilizaResultado (simbolo) {
+        const seletores = {
+            X: '#vitoriasdex',
+            O: '#vitoriasdeo',
+            EMPATE: '#empates'
+        }
+
+        const contador = document.querySelector(seletores[simbolo])
+        contador.value++
+    }
+
+    function resetResultado () {
+        document.querySelector('#vitoriasdex').value++
+        document.querySelector('#vitoriasdeo').value++
+        document.querySelector('#empates').value++
+    }
+
+    function desabilitarCelulas () {
+        const CELULAS = document.querySelectorAll('.celula')
+
+        for (const BOTAO of CELULAS) {
+            BOTAO.setAttribute('disabled', true)
+        }
+    }
+
+    function reset () {
+        jogadas = 0
+        jogoAcabou = false
+        const CELULAS = document.querySelectorAll('.celula')
+
+        for (const BOTAO of CELULAS) {
+            BOTAO.removeAttribute('disabled')
+            BOTAO.innerHTML = '&nbsp;&nbsp;&nbsp;'
+        }
+    }
+})
