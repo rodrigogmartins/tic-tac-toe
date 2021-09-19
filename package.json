@@ -1,18 +1,17 @@
 {
-  "name": "Tic-Tac-Toe",
-  "version": "1.0.0",
-  "description": "Tic-Tac-Toe",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "live-server"
-  },
-  "keywords": [],
-  "author": "Rodrigo Gaspar Martins",
-  "license": "MIT",
-  "devDependencies": {
-    "eslint": "^4.13.1",
-    "eslint-config-google": "^0.9.1",
-    "live-server": "^1.2.1"
-  }
+    "name": "tic-tac-toe",
+    "version": "1.0.0",
+    "description": "Tic-Tac-Toe",
+    "main": "index.js",
+    "scripts": {
+        "start": "live-server"
+    },
+    "keywords": [],
+    "author": "Rodrigo Gaspar Martins",
+    "license": "MIT",
+    "devDependencies": {
+        "eslint": "^4.13.1",
+        "eslint-config-google": "^0.9.1",
+        "live-server": "^1.2.1"
+    }
 }
