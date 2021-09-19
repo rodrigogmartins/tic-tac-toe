@@ -1,9 +1,8 @@
 export class GameService {
-    realizaJogada (celulaId, simbolo) {
-        const celulaHtml = document.querySelector(`button#${celulaId}`)
-        celulaHtml.setAttribute('disabled', true)
+    realizaJogada (celula, simbolo) {
+        celula.setAttribute('disabled', true)
 
-        return (celulaHtml.textContent = simbolo)
+        return (celula.textContent = simbolo)
     }
 
     verificaVitoria (celulas, simbolo) {
@@ -40,7 +39,7 @@ export class GameService {
     vitoria (celulas, indiceInicial, incremento, simbolo) {
         let result = true
 
-        for (let i = indiceInicial; i < celulas.length; i += incremento) {
+        for (let i = indiceInicial, j = 0; j < 3; i += incremento, j++) {
             result = result && celulas[i].textContent === simbolo
         }
 

@@ -98,6 +98,12 @@ h4 {
     background-color: var(--background-color);
     transition: 0.5s;
     cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10em;
+    color: #dee0e4;
 }
 
 .celula:hover {

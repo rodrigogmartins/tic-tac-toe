@@ -1,4 +1,4 @@
-import { GameService } from './GameService'
+import { GameService } from './GameService.js'
 
 document.addEventListener('DOMContentLoaded', function () {
     const GAME = new GameService()
@@ -11,15 +11,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
     TABULEIRO.addEventListener('click', function (e) {
         if (
-            e.target.tagName === 'BUTTON' &&
-            jogadas < MAXJOGADAS &&
-            !jogoAcabou
+            e.target.className === 'celula' &&
+            e.target.getAttribute('disabled') !== 'true' &&
+            !jogoAcabou &&
+            jogadas < MAXJOGADAS
         ) {
-            const celulaId = e.target.id
+            const celula = e.target
             const celulas = document.querySelectorAll('.celula')
             const simbolo = jogadas % 2 === 0 ? 'X' : 'O'
 
-            GAME.realizaJogada(celulaId, simbolo)
+            GAME.realizaJogada(celula, simbolo)
             jogadas++
 
             if (GAME.verificaVitoria(celulas, simbolo)) {
@@ -43,19 +44,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function contabilizaResultado (simbolo) {
         const seletores = {
-            X: '#vitoriasdex',
-            O: '#vitoriasdeo',
+            X: '#vitoriasJogador1',
+            O: '#vitoriasJogador2',
             EMPATE: '#empates'
         }
 
+        console.log(seletores[simbolo])
         const contador = document.querySelector(seletores[simbolo])
         contador.value++
     }
 
     function resetResultado () {
-        document.querySelector('#vitoriasdex').value++
-        document.querySelector('#vitoriasdeo').value++
-        document.querySelector('#empates').value++
+        document.querySelector('#vitoriasJogador1').value = 0
+        document.querySelector('#vitoriasJogador2').value = 0
+        document.querySelector('#empates').value = 0
     }
 
     function desabilitarCelulas () {
