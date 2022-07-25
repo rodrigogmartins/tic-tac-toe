@@ -1,111 +1,111 @@
 :root {
-    --background-color: #464655;
-    --background-hover-color: #59596d;
-    --text-color: #eddfef;
-    --text-dark-color: #d5cfe1;
+  --background-color: #464655;
+  --background-hover-color: #59596d;
+  --text-color: #eddfef;
+  --text-dark-color: #d5cfe1;
 }
 
 body {
-    font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
-    background: var(--background-color);
+  font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
+  background: var(--background-color);
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #plataforma {
-    width: 470px;
-    padding-top: 25px;
-    font-size: 2em;
+  width: 470px;
+  padding-top: 25px;
+  font-size: 2em;
 
-    color: var(--text-color);
-    background: var(--background-color);
+  color: var(--text-color);
+  background: var(--background-color);
 }
 
 #informacoesDoJogo {
-    width: 100%;
+  width: 100%;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 h4 {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 #vitorias {
-    font-size: 0.8em;
+  font-size: 0.8em;
 }
 
 #vitorias > div {
-    margin: 15px 0px;
+  margin: 15px 0px;
 }
 
 .labelVitorias {
-    width: 85px;
-    padding: 1px 2px;
-    display: inline-block;
-    font-size: 0.8em;
+  width: 85px;
+  padding: 1px 2px;
+  display: inline-block;
+  font-size: 0.8em;
 }
 
 #botoes {
-    width: 150px;
-    margin-left: 60px;
+  width: 150px;
+  margin-left: 60px;
 
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 #botoes > button {
-    margin: 8px 0px;
+  margin: 8px 0px;
 }
 
 .btn-comando {
-    padding: 0.2em;
-    font-size: 1em;
+  padding: 0.2em;
+  font-size: 1em;
 
-    color: var(--background-color);
-    background-color: var(--text-dark-color);
+  color: var(--background-color);
+  background-color: var(--text-dark-color);
 
-    border: none;
+  border: none;
 
-    cursor: pointer;
-    transition: 0.5s;
+  cursor: pointer;
+  transition: 0.5s;
 }
 
 .btn-comando:hover {
-    background-color: var(--text-color);
+  background-color: var(--text-color);
 }
 
 #tabuleiro {
-    width: 470px;
-    margin-top: 50px;
+  width: 470px;
+  margin-top: 50px;
 
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
 
-    background-color: var(--text-dark-color);
+  background-color: var(--text-dark-color);
 }
 
 .celula {
-    padding: 0px;
-    width: 150px;
-    height: 150px;
+  padding: 0px;
+  width: 150px;
+  height: 150px;
 
-    background-color: var(--background-color);
-    transition: 0.5s;
-    cursor: pointer;
+  background-color: var(--background-color);
+  transition: 0.5s;
+  cursor: pointer;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 10em;
-    color: #dee0e4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10em;
+  color: #dee0e4;
 }
 
 .celula:hover {
-    background-color: var(--background-hover-color);
+  background-color: var(--background-hover-color);
 }
